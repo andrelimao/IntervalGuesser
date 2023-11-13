@@ -1,0 +1,11 @@
+<resources>
+    <string-array name="textobotao">
+        <item>Jônio</item>
+        <item>Dórico</item>
+        <item>Frígio</item>
+        <item>Mixolídio</item>
+        <item>Lídio</item>
+        <item>Eólio</item>
+        <item>Lócrio</item>
+    </string-array>
+</resources>

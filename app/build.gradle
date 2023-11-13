@@ -1,0 +1,36 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 33
+    buildToolsVersion "19.0.0"
+    namespace 'com.example.intervalguesser'
+
+    defaultConfig {
+        minSdkVersion 15
+        targetSdkVersion 33
+        versionCode 1
+        versionName "1.0"
+    }
+    buildTypes {
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile ('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+
+    repositories {
+    	maven {url 'https://maven.google.com'}
+        maven { url 'https://github.com/kshoji/javax.sound.midi-for-Android/raw/master/javax.sound.midi/repository' }
+        maven { url 'https://github.com/kshoji/JFugue-for-Android/raw/master/jfugue-android/snapshot' }
+    }
+
+    dependencies {
+        implementation fileTree (dir: 'libs', include: ['*.jar'])
+        implementation "androidx.constraintlayout:constraintlayout:2.1.1"
+        implementation 'junit:junit:4.12'
+        implementation 'jp.kshoji:javax-sound-midi:0.0.3:@aar'
+        implementation 'jp.kshoji:jfugue-android:5.0.1.201503:@aar'
+
+    }
+}
